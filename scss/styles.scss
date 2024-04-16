@@ -99,18 +99,45 @@ body {
     color: white;
 }
 
-.circle-container {
-    background-color: #ec563d;
-    border-radius: 360px;
-    width: auto;
-    height: auto;
+#section-4 {
+    background-color: #e0e5eb;
 }
 
-.circle-container img {
-    width: 50%;
-    height: auto;
+#my-works {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    background-color: $navy-blue;
+    width: 340px;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
 }
 
-#red-flag {
-    width: 60%;
+#learn-more {
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    border: none;
+}
+
+
+#five-img-container {
+    display: grid;
+    justify-items: center;
+    row-gap: 20px;
+}
+
+.svg-container {
+    position: absolute;
+    z-index: -1;
+}
+
+.svg-vertical {
+    padding-left: 118px;
+}
+
+#five-img-first {
+    margin-top: 50px;
 }
