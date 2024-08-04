@@ -1,23 +1,41 @@
+// header {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   border: 2px solid black;
+//   margin: 0;
+//   padding: 0;
+//   height: auto;
+// }
+
+// header img {
+//   width: 3rem;
+//   height: auto;
+//   margin: 0 10px;
+//   display: grid;
+//   justify-self: start;
+//   align-self: center;
+// }
+
+// .menu-icon {
+//   font-size: 2.5rem;
+//   justify-self: end;
+//   margin: 50px;
+// }
+
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid black;
-  margin: 0;
-  padding: 0;
-  height: auto;
+  justify-items: end;
+  align-items: center;
 }
 
 header img {
-  width: 5rem;
+  width: 4rem;
   height: auto;
-  margin: 0 10px;
-  display: grid;
-  justify-self: start;
-  align-self: center;
+  justify-self: left;
+  padding-left: 1rem;
 }
 
-.menu-icon {
-  font-size: 2.5rem;
-  justify-self: end;
-  margin: 50px;
+#menu-icon {
+  padding-right: 1rem;
 }

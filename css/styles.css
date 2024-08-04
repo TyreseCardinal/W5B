@@ -1,39 +1,71 @@
+/* Importing SCSS files */
 header {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: 2px solid black;
-  margin: 0;
-  padding: 0;
-  height: auto;
+  justify-items: end;
+  align-items: center;
 }
 
 header img {
-  width: 5rem;
+  width: 4rem;
   height: auto;
-  margin: 0 10px;
+  justify-self: left;
+  padding-left: 1rem;
+}
+
+#menu-icon {
+  padding-right: 1rem;
+}
+
+#footer-text {
   display: grid;
-  justify-self: start;
-  align-self: center;
 }
 
-.menu-icon {
-  font-size: 2.5rem;
-  justify-self: end;
-  margin: 50px;
+.container {
+  width: 100%;
 }
 
+@media screen and (max-width: 575px) {
+  .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 575px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+/* Variables */
+/* General Styling */
 body {
   font-family: "PT Sans", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-  #section-2 {
-    display: grid;
-    grid-template-rows: repeat(13, auto);
-  }
+/* Section 1 */
+#section-1 {
+  background-color: #e4e5e9;
+  display: grid;
+  padding: 30px 40px;
 }
-.circle {
-  fill: #000080;
+
+#section-1 h1 {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 #section-1 img {
@@ -41,21 +73,26 @@ body {
   height: auto;
 }
 
-#section-1 {
-  background-color: #e4e5e9;
-  display: grid;
+.circle {
+  fill: #ec563d;
+  justify-self: center;
+  padding: 0px;
+  margin: 0px;
 }
 
-@media screen and (max-width: 768px) {
-  #section-1 {
-    grid-template-rows: repeat(5, auto);
-  }
-}
+/* Read More Button */
 #read-more {
   background-color: black;
   color: white;
+  margin: 45px auto 0 0;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-style: none;
 }
 
+/* Social Icons */
 #socials {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -68,8 +105,33 @@ body {
   padding: 0 5px;
 }
 
+/* Section 2 */
+#section-2 {
+  text-align: center;
+}
+
 #whitedude-laptop {
   display: grid;
+  width: 80%;
+}
+
+#section-2 img {
+  width: 300px;
+  height: 300px;
+}
+
+#orange-box {
+  background-color: #ec563d;
+  color: white;
+}
+
+/* Section 3 */
+#section-3 {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+#whitedude-laptop {
   width: 80%;
 }
 
@@ -78,11 +140,21 @@ body {
   color: white;
 }
 
-#section-4 {
-  background-color: #e0e5eb;
+#section-3 img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
 }
 
-#my-works {
+/* Section 4 */
+#section-4 {
+  background-color: #e0e5eb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.what-card {
   display: grid;
   grid-template-rows: repeat(3, auto);
   background-color: #000080;
@@ -101,10 +173,16 @@ body {
   border: none;
 }
 
+/* Section 5 */
+#section-5 {
+  position: relative;
+}
+
 #five-img-container {
   display: grid;
   justify-items: center;
   row-gap: 20px;
+  position: relative;
 }
 
 .svg-container {
@@ -113,11 +191,82 @@ body {
 }
 
 .svg-vertical {
-  padding-left: 118px;
+  place-self: center;
+}
+
+#five-img-container img {
+  width: 340px;
+  height: 340px;
 }
 
 #five-img-first {
   margin-top: 50px;
+}
+
+/* Section 6 */
+#section-6 {
+  margin-top: 5rem;
+}
+
+#card-carousel-1 img {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ec563d;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* Section 7 */
+#section-7 {
+  text-align: center;
+}
+
+#textbox-container {
+  display: grid;
+  gap: 10px;
+}
+
+#textbox-container input,
+#textbox-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#textbox-container button {
+  padding: 10px;
+  border: none;
+  background-color: #ec563d;
+  color: white;
+  cursor: pointer;
+}
+
+#socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icons {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer-text {
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,59 +1,27 @@
+/* Importing SCSS files */
 @use "header.scss";
 @use "footer.scss";
+@use "responsive.scss";
 
+/* Variables */
 $navy-blue: #000080;
+$orange: #ec563d;
 
-// Styling //
-
+/* General Styling */
 body {
     font-family: 'PT Sans', sans-serif;
 }
 
-// @media screen and (max-width:768px) {
-//     .container {
-//         grid-template-columns: 1fr;
-//         grid-template-rows: repeat(3, 1fr);
-//     }
-
-//     .card {
-//         margin: .5em 1em;
-//     }
-// }
-
-// @media screen and (min-width:768px) {
-//     .container {
-//         grid-template-columns: repeat(3, auto);
-//         grid-template-rows: 1fr;
-//     }
-
-//     .card {
-//         margin: 1em 10px;
-//     }
-// }
-
-// >.container {
-//     display: grid;
-
-//     >.card {
-//         display: grid;
-//         border: 1px solid black;
-//         padding: 10px;
-//         justify-items: center;
-//         align-items: center;
-//         background-color: white;
-//         color: $navy-blue;
-//     }
-// }
-
-@media screen and (max-width: 768px) {
-    #section-2 {
-        display: grid;
-        grid-template-rows: repeat(13, auto);
-    }
+/* Section 1 */
+#section-1 {
+    background-color: #e4e5e9;
+    display: grid;
+    padding: 30px 40px;
 }
 
-.circle {
-    fill: $navy-blue;
+#section-1 h1 {
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 #section-1 img {
@@ -61,22 +29,26 @@ body {
     height: auto;
 }
 
-#section-1 {
-    background-color: #e4e5e9;
-    display: grid;
+.circle {
+    fill: $orange;
+    justify-self: center;
+    padding: 0px;
+    margin: 0px;
 }
 
-@media screen and (max-width: 768px) {
-    #section-1 {
-        grid-template-rows: repeat(5, auto);
-    }
-}
-
+/* Read More Button */
 #read-more {
     background-color: black;
     color: white;
+    margin: 45px auto 0 0;
+    font-size: 1.25rem;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-style: none;
 }
 
+/* Social Icons */
 #socials {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -89,21 +61,56 @@ body {
     padding: 0 5px;
 }
 
+/* Section 2 */
+#section-2 {
+    text-align: center;
+}
+
 #whitedude-laptop {
     display: grid;
     width: 80%;
 }
 
+#section-2 img {
+    width: 300px;
+    height: 300px;
+}
+
 #orange-box {
-    background-color: #ec563d;
+    background-color: $orange;
     color: white;
 }
 
-#section-4 {
-    background-color: #e0e5eb;
+/* Section 3 */
+#section-3 {
+    text-align: center;
+    margin-top: 5rem;
 }
 
-#my-works {
+#whitedude-laptop {
+    width: 80%;
+}
+
+#orange-box {
+    background-color: $orange;
+    color: white;
+}
+
+#section-3 img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
+
+/* Section 4 */
+#section-4 {
+    background-color: #e0e5eb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.what-card {
     display: grid;
     grid-template-rows: repeat(3, auto);
     background-color: $navy-blue;
@@ -122,11 +129,16 @@ body {
     border: none;
 }
 
+/* Section 5 */
+#section-5 {
+    position: relative;
+}
 
 #five-img-container {
     display: grid;
     justify-items: center;
     row-gap: 20px;
+    position: relative;
 }
 
 .svg-container {
@@ -135,9 +147,80 @@ body {
 }
 
 .svg-vertical {
-    padding-left: 118px;
+    place-self: center;
+}
+
+#five-img-container img {
+    width: 340px;
+    height: 340px;
 }
 
 #five-img-first {
     margin-top: 50px;
+}
+
+/* Section 6 */
+#section-6 {
+    margin-top: 5rem;
+}
+
+#card-carousel-1 img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid $orange;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Section 7 */
+#section-7 {
+    text-align: center;
+}
+
+#textbox-container {
+    display: grid;
+    gap: 10px;
+}
+
+#textbox-container input,
+#textbox-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#textbox-container button {
+    padding: 10px;
+    border: none;
+    background-color: $orange;
+    color: white;
+    cursor: pointer;
+}
+
+#socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-icons {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#footer-text {
+    margin: 0;
 }
